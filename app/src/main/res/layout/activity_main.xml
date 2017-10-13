@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tk.shadowking.studentdetail.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameL"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20sp"
+        android:layout_marginStart="10sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="25sp"
+            android:id="@+id/sName"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:labelFor="@id/name"
+            android:layout_marginStart="5sp"
+            android:inputType="text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactL"
+        android:layout_below="@id/nameL"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="10sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact"
+            android:textSize="25sp"
+            android:id="@+id/sContact"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/contact"
+            android:labelFor="@id/contact"
+            android:layout_marginStart="5sp"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/contactL"
+        android:id="@+id/gender"
+        android:layout_marginStart="25sp"
+        android:layout_marginTop="10sp"
+        android:weightSum="10">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/female"
+            android:text="@string/female"
+            android:textSize="20sp"
+            android:layout_weight="5"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/male"
+            android:text="@string/male"
+            android:textSize="20sp"
+            android:layout_weight="5"/>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/year"
+        android:layout_margin="25sp"
+        android:weightSum="15"
+        android:layout_below="@id/gender">
+
+        <RadioButton
+            android:id="@+id/yr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yr1"
+            android:textSize="20sp"
+            android:layout_weight="5"
+            android:onClick="displayYr"/>
+
+        <RadioButton
+            android:id="@+id/yr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yr2"
+            android:textSize="20sp"
+            android:layout_weight="5"
+            android:onClick="displayYr" />
+
+        <RadioButton
+            android:id="@+id/yr3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yr3"
+            android:textSize="20sp"
+            android:layout_weight="5"
+            android:onClick="displayYr"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/langs"
+        android:layout_below="@+id/year"
+        android:layout_marginStart="15sp"
+        android:layout_alignStart="@+id/contactL"
+        android:weightSum="15">
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:id="@+id/cb1"
+            android:text="@string/cpp"
+            android:textSize="20sp"/>
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:id="@+id/cb2"
+            android:text="@string/java"
+            android:textSize="20sp"/>
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:id="@+id/cb3"
+            android:text="@string/python"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/langs"
+        android:textSize="15sp"
+        android:textColor="#f00"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/contactL" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/langs"
+        android:layout_alignEnd="@+id/langs" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_below="@id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="55sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/yr"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

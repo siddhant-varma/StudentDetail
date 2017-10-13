@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tk.shadowking.studentdetail.view">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5sp"
+        android:id="@+id/viewTable">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewName"
+            android:layout_margin="10sp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:textSize="25sp"
+                android:text="@string/name" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/displayName"
+                android:textSize="25sp"
+                android:layout_marginStart="15sp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewContact"
+            android:layout_margin="10sp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:textSize="25sp"
+                android:text="@string/contact" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/displayContact"
+                android:textSize="25sp"
+                android:layout_marginStart="15sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewGender"
+            android:layout_margin="10sp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:textSize="25sp"
+                android:text="@string/gender" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/displayGender"
+                android:textSize="25sp"
+                android:layout_marginStart="15sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewYear"
+            android:layout_margin="10sp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:textSize="25sp"
+                android:text="@string/year" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/displayYear"
+                android:textSize="25sp"
+                android:layout_marginStart="15sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewLanguages"
+            android:layout_margin="10sp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:textSize="15sp"
+                android:text="@string/langK" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/displaylanguages"
+                android:textSize="15sp"
+                android:layout_marginStart="15sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/music"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_below="@id/viewTable"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:layout_centerVertical="true"
+        android:background="@null"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/music"
+        android:layout_margin="40sp"
+        android:weightSum="10"
+        android:id="@+id/linearLayout">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="50sp"
+            android:layout_weight="5"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_margin="15sp"
+            android:id="@+id/share"
+            android:src="@drawable/whatsapp"
+            android:background="@null" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="50sp"
+            android:layout_weight="5"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_margin="15sp"
+            android:id="@+id/mail"
+            android:src="@drawable/share"
+            android:background="@null" />
+
+    </LinearLayout>
+
+</RelativeLayout>

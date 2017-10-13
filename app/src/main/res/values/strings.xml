@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Student Detail</string>
+    <string name="title">Enter Your Details:</string>
+    <string name="name">Name:</string>
+    <string name="contact">Contact:</string>
+    <string name="gender">Gender:</string>
+    <string name="year">Year:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="yr1">First year</string>
+    <string name="greet1">"Welcome to the College!"</string>
+    <string name="yr2">Second year</string>
+    <string name="greet2">"Enjoy 2nd Year"</string>
+    <string name="yr3">Third year</string>
+    <string name="greet3">"Having fun in Final year?"</string>
+    <string name="submit">Submit Details</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="langK">Languages Known:</string>
+    <string name="cpp">C++</string>
+    <string name="java">Java</string>
+    <string name="python">Python</string>
+
+</resources>
